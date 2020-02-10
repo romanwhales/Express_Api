@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 
 const app = express();
-const db = mongoose.connect('mongodb://localhost/bookAPI');
+const db = mongoose.connect('mongodb://localhost/bookAPI', { useNewUrlParser: true });
 // const bookRouter = express.Router();
 const port = process.env.PORT || 4500;
 const Book = require('./models/bookModel');
